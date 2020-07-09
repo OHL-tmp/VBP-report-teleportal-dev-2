@@ -63,7 +63,8 @@ def modal_self_recording(app):
         )
 
 def video_modal_upload_body():
-    return html.Div([
+    return html.Div(
+        [
             dcc.Upload(
                 id = 'video-modal-upload-upload',
                 children = html.Div([
@@ -79,5 +80,8 @@ def video_modal_upload_body():
                     },
                 accept = "video/*"
                 ),
-            html.Div(id = "video-modal-upload-output",style={"margin-top":"20px","padding":"20px","background":"#f5f5f5","border-radius":"0.5rem"})
-        ])
+            dcc.Loading(
+                html.Div(id = "video-modal-upload-output",style={"margin-top":"20px","padding":"20px","background":"#f5f5f5","border-radius":"0.5rem"})
+            )
+        ]
+    )

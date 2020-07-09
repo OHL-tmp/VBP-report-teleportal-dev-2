@@ -10,9 +10,9 @@ from flask_login import logout_user, current_user
 
 # app pages
 from pages import (
-    home,
-    profile,
-    page1,
+    # home,
+    # profile,
+    # page1,
     patient_portal,
 )
 
@@ -143,4 +143,4 @@ def user_logout(input1):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(host='0.0.0.0', port=8095)

@@ -76,7 +76,7 @@ def layout():
                                 style={"text-align":"center","padding":"4rem"}
                             ),
                             html.Div(
-                                html.H2("Patient",style={"font-size":"1.6rem","padding-left":"20px"}),
+                                html.H2("Patient Login",style={"font-size":"1.6rem","padding-left":"20px"}),
                                 style={"text-align":"start"}
                             ),
                             html.Div(id = 'store-location'),

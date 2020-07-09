@@ -621,9 +621,9 @@ def upload_video(filename, contents, last_modified):
         d = datetime.datetime.now().strftime('%m/%d/%Y')
 
         filename = filename.replace(" ",'_')    
-        path = str('configure/') + patient_name +str('/upload/') + submit_date + str('_') + filename
-        if not os.path.exists(str('configure/') + patient_name +str('/upload/')):
-            os.makedirs(str('configure/') + patient_name +str('/upload/'))
+        path = str('configure/') + current_user.email +str('/upload/') + submit_date + str('_') + filename
+        if not os.path.exists(str('configure/') + current_user.email +str('/upload/')):
+            os.makedirs(str('configure/') + current_user.email +str('/upload/'))
         with open(path, "wb") as file:
             file.write(decoded)
 
